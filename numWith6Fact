@@ -1,0 +1,33 @@
+
+
+//test case
+const test1 = 128;
+const test2 = 1024;
+const test3 = 16384;
+const test4 = 262144;
+const test5 = 134217728;
+
+//begin code
+function numWith6Fact(nums) {
+  let result = 0 
+  for(let i = 12 ; i <= nums ; i++) {
+    let countFact = 0
+    for(let j = 1 ; j <= i ; j++) {
+      if(i % j === 0 ) {
+        countFact += 1;
+      }
+      if(countFact > 6) break;
+    }
+    if(countFact === 6) {
+      result += 1; 
+    }
+  };
+  return result;
+};
+
+//begin test
+console.log(numWith6Fact(test1)); //19
+console.log(numWith6Fact(test2)); //112
+console.log(numWith6Fact(test3)); //1168
+console.log(numWith6Fact(test4)); //13208
+console.log(numWith6Fact(test5)); //
